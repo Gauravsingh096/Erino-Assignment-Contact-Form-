@@ -21,7 +21,7 @@ const ContactForm = ({ fetchContacts }) => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:5000/contacts", contact);
-      fetchContacts(); // Refresh table after adding a new contact
+      fetchContacts(); 
       setContact({ firstName: "", lastName: "", email: "", phoneNumber: "", company: "", jobTitle: "" });
     } catch (error) {
       console.error("Error adding contact:", error);
