@@ -37,7 +37,7 @@ const ContactTable = ({ contacts, fetchContacts }) => {
       console.log("Saving contact with ID:", editContactId);
       console.log("Edited Contact Data:", editedContact);
 
-      // Send PUT request to update contact
+      
       const response = await axios.put(
         `http://localhost:5000/contacts/${editContactId}`,
         editedContact
@@ -45,7 +45,7 @@ const ContactTable = ({ contacts, fetchContacts }) => {
 
       console.log("Response from server:", response.data);
 
-      // Reset edit mode and refresh the contact list
+      
       setEditContactId(null);
       fetchContacts();
     } catch (error) {
